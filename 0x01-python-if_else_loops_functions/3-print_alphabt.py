@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for ascii_val in range(ord('a'), ord('z') + 1):
-    if ascii_val == 101 or ascii_val == 113:
+for i in range(ord('a'), ord('z') + 1):
+    if i == 101 or i == 113:
         continue
-    print(chr(ascii_val), end="")
+    print("{}".format(chr(i)), end="")
