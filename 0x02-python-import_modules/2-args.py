@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 import sys
 if __name__ == "__main__":
-	argv = sys.argv
+    argv = sys.argv
 length = len(argv) - 1
 if length < 1:
-    print(f"{length} arguments.")
+    print("{} arguments.".format(length))
 elif length == 1:
-    print(f"{length} argument:")
+    print("{} argument:".format(length))
 else:
-    print(f"{length} arguments:")
+    print("{} arguments:".format(length))
 count = 1
 for argument in argv:
     if argument == argv[0]:
