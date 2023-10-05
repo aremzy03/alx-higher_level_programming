@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
-argv = sys.argv
+if __name__ == "__main__":
+	argv = sys.argv
 sum = 0
 for num in argv:
     if num == argv[0]:
