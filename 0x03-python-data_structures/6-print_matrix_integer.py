@@ -6,5 +6,6 @@ def print_matrix_integer(matrix=[[]]):
             if count == len(item):
                 print("{}".format(i))
             else:
-                print("{} ".format(i), end="")
+                print("{}".format(i), end="")
+                print(" ", end="")
             count += 1
