@@ -11,6 +11,6 @@ def print_matrix_integer(matrix=[[]]):
                         print("{:d} ".format(i), end="")
                     count += 1
             else:
-                continue
+                print("{}".format(item))
     else:
         return
