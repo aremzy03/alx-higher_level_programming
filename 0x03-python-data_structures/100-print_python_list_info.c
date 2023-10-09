@@ -8,7 +8,6 @@ void print_python_list_info(PyObject *p)
 {
 	int size, alloc, i;
 	PyObject *item;
-	char *type1;
 
 	size  = Py_SIZE(p);
 	alloc = ((PyListObject *)p)->allocated;
@@ -18,6 +17,6 @@ void print_python_list_info(PyObject *p)
 	{
 		item = PyList_GET_ITEM(p, i);
 		type = PyTYPE(item)->tp_name;
-		printf("Element %d: %s\n", i, type1);
+		printf("Element %d: %s\n", i, Py_TYPE(item)->tp_name);
 	}
 }
