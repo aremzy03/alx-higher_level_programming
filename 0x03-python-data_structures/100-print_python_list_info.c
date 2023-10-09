@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include "listobject.h"
-#include "object.h"
+#include <Python.h>
 /**
  * print_python_list_info - prints python list info
  * @p: The PyObject list
@@ -17,7 +15,6 @@ void print_python_list_info(PyObject *p)
 	for (i = 0; i < size; i++)
 	{
 		item = PyList_GET_ITEM(p, i);
-		type = PyTYPE(item)->tp_name;
 		printf("Element %d: %s\n", i, Py_TYPE(item)->tp_name);
 	}
 }
