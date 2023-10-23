@@ -6,12 +6,12 @@ def safe_print_list(my_list=[], x=0):
         my_list (list, optional): _description_. Defaults to [].
         x (int, optional): _description_. Defaults to 0.
     """
-    count = -1
+    count = 0
     while count != x:
         try:
-            count += 1
             print(my_list[count], end="")
-        except Exception:
+            count += 1
+        except (IndexError, TypeError):
             break
     print()
     return (count)
