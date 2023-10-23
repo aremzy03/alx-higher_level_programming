@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-def safe_print_integer(value):
-    """Prints the integers if it doesn't return error
+import sys
+
+
+def safe_print_integer_err(value):
+    """
+    prints an integer safely
 
     Args:
         value (_type_): the integer to be printed
@@ -8,5 +12,7 @@ def safe_print_integer(value):
     try:
         print("{:d}".format(value))
     except (ValueError, TypeError):
+        sys.stderr.write("Exception: Unknown \
+format code 'd' for object of type 'str'\n")
         return False
     return True
