@@ -11,7 +11,7 @@ def safe_print_list(my_list=[], x=0):
         try:
             count += 1
             print(my_list[count], end="")
-        except IndexError:
+        except (IndexError, ValueError, TypeError):
             break
     print()
     return (count)
