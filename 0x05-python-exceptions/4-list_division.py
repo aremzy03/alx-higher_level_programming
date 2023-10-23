@@ -13,17 +13,16 @@ def list_division(my_list_1, my_list_2, list_length):
     while count != list_length:
         try:
             result = my_list_1[count] / my_list_2[count]
-            new_list.append(result)
-        except ValueError:
-            result = 0
-            new_list.append(result)
         except TypeError:
             print("wrong type")
+            result = 0
         except ZeroDivisionError:
             print("division by zero")
+            result = 0
         except IndexError:
             print("out of range")
+            result = 0
         finally:
-            pass
+            new_list.append(result)
         count += 1
     return new_list
