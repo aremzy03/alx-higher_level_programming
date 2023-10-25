@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 class Square:
+    """This a square class that does alot
+    """
     def __init__(self, size=0, position=(0, 0)):
         self._Square__size = size
         self._Square__pos = position
