@@ -120,7 +120,8 @@ class Square:
         """
         if self._Square__size == 0:
             for a in range(self._Square__pos):
-                print("")
+                print(" ")
+            print("")
         else:
             for i in range(self._Square__size):
                 for k in range(self._Square__pos[0]):
