@@ -83,7 +83,10 @@ class Square:
             ###
             ###
         """
-        for i in range(self._Square__size):
-            for j in range(self._Square__size):
-                print("#", end="")
+        if self._Square__size == 0:
             print("")
+        else:
+            for i in range(self._Square__size):
+                for j in range(self._Square__size):
+                    print("#", end="")
+                print("")

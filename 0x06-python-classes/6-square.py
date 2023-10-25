@@ -118,9 +118,13 @@ class Square:
              ###
             ###
         """
-        for i in range(self._Square__size):
-            for k in range(self._Square__pos[0]):
-                print(" ", end="")
-            for j in range(self._Square__size):
-                print("#", end="")
-            print("")
+        if self._Square__size == 0:
+            for a in range(self._Square__pos):
+                print("")
+        else:
+            for i in range(self._Square__size):
+                for k in range(self._Square__pos[0]):
+                    print(" ", end="")
+                for j in range(self._Square__size):
+                    print("#", end="")
+                print("")
