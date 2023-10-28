@@ -1,0 +1,38 @@
+============
+Print Square
+============
+``print_square()`` this function prints a Square depending on the size passed an argument
+the function takes only one argument and that's the size.
+Example:
+::
+    >>> print_square = __import__("4-print_square").print_square
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Though it take only one argument it always have to be an integer unless it returns an error.
+Example:
+Testing the function with a string.
+::
+    >>> print_square("hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Also the size cannot be less than zero(0) i.e. a negative value - it returns a ValueError.
+Example:
+::
+    >>> print_square(-5)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+And Finally the size cannot be floating points less than zero.
+Example:
+::
+    >>> print_square(0.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
