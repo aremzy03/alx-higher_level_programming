@@ -1,0 +1,33 @@
+============
+Say my name
+============
+``say_my_name()`` this functon is quite simple, prints the the string ```My name is <first name> <last name>```
+to the standard output
+
+``say_my_name()`` takes to arguments first_name and last name and prints a sentence adding to two arguments
+Example:
+::
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+    >>> say_my_name("Aremu", "Abdulmalik")
+    My name is Aremu Abdulmalik
+
+See pretty simple, but the function strictly only accept strings, anything other than that returns a TypeError
+depending on where it encounters it
+Example:
+::
+    >>> say_my_name("Aremu", 15)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name(20, "Abdulmalik")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+One last thing, the last_name holds a default value which is a empty string if only
+one arguments is passed
+Example:
+::
+    >>> say_my_name("Abdulmalik")
+    My name is Abdulmalik 

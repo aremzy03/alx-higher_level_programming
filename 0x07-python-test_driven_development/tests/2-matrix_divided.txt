@@ -1,0 +1,74 @@
+===========================
+The matrix_divided function
+===========================
+
+The ``matrix_divided`` module holds the ``matrix_divided()``
+
+The ``matrix_divided()`` functions divides each integers or floating points by a given value and returns
+a new matrix contain its results
+
+Example:
+::
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+The ``matrix_divided()`` can work for matrices of any size as long as it is a valid matrix
+::
+    >>> matrix2 = [
+    ... [2, 4, 6, 8 ,10],
+    ... [4, 8, 12, 16, 20],
+    ... [6, 12, 24, 48, 96]
+    ... ]
+    >>> matrix_divided(matrix2, 2)
+    [[1.0, 2.0, 3.0, 4.0, 5.0], [2.0, 4.0, 6.0, 8.0, 10.0], [3.0, 6.0, 12.0, 24.0, 48.0]]
+
+In the case where the matrix is invalid,an error returns and this can happen 
+if the program encounters one of the following:
+- The matrix is a list containaining lists
+::
+    >>> matrix3 = 5
+    >>> matrix_divided(5, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+- The length of the matrix's lists are not equivalent
+::
+    >>> matrix4 = [
+    ... [1, 2, 3],
+    ... [4, 5]
+    ... ]
+    >>> matrix_divided(matrix4, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+
+- Each element in the lists are not integers or floating points
+::
+    >>> matrix5 = [
+    ... [1, 3, "hello"],
+    ... [2, 6, "hello world!"]
+    ... ]
+    >>> matrix_divided(matrix5, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Also, the divisor should as well be either an int or a float.
+::
+    >>> matrix_divided(matrix, "hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+And absolutely cannot be zero(0).
+::
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero

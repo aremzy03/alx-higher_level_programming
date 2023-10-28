@@ -1,0 +1,46 @@
+========================
+How to use 0-add_integer
+========================
+
+The function ``add_integer()`` add two integers and returns the results.
+
+``add_integer()`` returns the sum of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer(1, 1)
+    2
+
+If only only one argument is passed then the second argument is `98` by default
+so it adds the single argument to 98
+
+::
+    >>> add_integer(100)
+    198
+
+It also works with floating points
+
+::
+    >>> add_integer(2.0, 2)
+    4.0
+
+If you were to add long floats then the results should be rounded to 2d.p
+
+::
+    >>> add_integer(2.222222222, 1)
+    3.22
+
+If the function should encounter an error i.e. if any of the arguments isn't an integer or float
+
+::
+    >>> add_integer("hello", 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(3, "world")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
