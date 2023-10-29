@@ -1,0 +1,26 @@
+================
+Text Indentation
+================
+``text_indentation()`` takes any given text as argument the checks for a delimiter character
+then it adds two new line after each delimiter character
+The delimiter characters in this function are:
+period (.)
+the colon (:)
+and the question mark (?)
+Example:
+::
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+    >>> text_indentation("Hey Bro? What's up.")
+    Hey Bro?
+    <BLANKLINE>
+    What's up.
+    <BLANKLINE>
+
+The ``text_indentation()`` function strictly only accepts strings as an argument, in the 
+case where a wrong type is passed, a Traceback error is returned
+Example:
+::
+    >>> text_indentation(200)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
