@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This function divides a matrix
+This function divides a rix
 """
 
 
@@ -8,7 +8,7 @@ def matrix_divided(matrix, div):
     """_summary_
 
     Args:
-        matrix (_type_): _description_
+        rix (_type_): _description_
         div (_type_): _description_
     """
     if not isinstance(matrix, list):
