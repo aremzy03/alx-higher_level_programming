@@ -5,6 +5,7 @@
 
 class Rectangle:
     """This is a Rectangle class with a getter and setter for the width
+    and a perimeter method
     """
 
     @property
